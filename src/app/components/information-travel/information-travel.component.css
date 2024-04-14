@@ -1,0 +1,54 @@
+.pendientes{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/* Estilos para el contenedor principal */
+.information-container {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el título */
+h2 {
+  margin-bottom: 15px;
+  margin-top: 28px;
+  font-size: 30px;
+  color:  rgb(65, 65, 176);
+  text-align: center;
+}
+
+/* Estilos para los elementos en lista */
+.information-container li {
+  margin-bottom: 8px;
+  border-bottom: solid 1px  rgb(65, 65, 176);
+}
+
+/* Estilos para el texto en negrita */
+.information-container ol {
+  list-style-type: none; /* Elimina la numeración de la lista */
+  font-size: 20px;
+}
+
+.information-container li {
+  margin-bottom: 5px;
+  font-size: 23px;
+  list-style-type: disc; /* Establece el estilo de las bolitas a círculos */
+  color: purple; /* Cambia el color de las bolitas a morado */
+  border-bottom: solid 1px rgb(65, 65, 176); /* Agrega una línea divisoria entre elementos de la lista */
+}
+
+/* Estilos para el texto en negrita */
+.information-container b {
+  font-weight: bold;
+  color: #555;
+}
+
+span{
+  color:#f90;
+  font-weight: bolder;
+  font-size: 24px;
+}

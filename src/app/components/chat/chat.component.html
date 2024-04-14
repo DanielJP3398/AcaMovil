@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+<div class="chat-container">
+  <header class="chat-header">
+    <div class="chat-title">
+      <h1>Chat</h1>
+    </div>
+    <div class="chat-user">
+      <img src="assets/perfil.jpg" alt="">
+
+    </div>
+  </header>
+  <main class="chat-messages">
+    <div class="message-container">
+      <div class="message-sender">AcaMovil</div>
+      <div class="message-content">Hola, Envia tu primer mensaje</div>
+    </div>
+    <main class="chat-messages">
+      <div *ngFor="let msg of mensajes" class="message-container">
+        <div class="message-sender">{{ msg.sender }}</div>
+        <div class="message-content">{{ msg.content }}</div>
+      </div>
+    </main>
+  </main>
+
+  <footer class="chat-footer">
+    <input type="text" placeholder="Escribe tu mensaje" [(ngModel)]="mensaje">
+    <button type="button" (click)="enviarMensaje()">Enviar</button>
+  </footer>
+
+
+</div>

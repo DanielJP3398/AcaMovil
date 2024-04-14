@@ -1,0 +1,89 @@
+<div id="map" #map class="map"></div>
+
+<div class="curucel" [formGroup]="peticionesFrom">
+
+  <div class="carrusel-container">
+    <img *ngFor="let image of images" [src]="image.nombre" (click)="selectImage(image)">
+  </div>
+
+  <div class="peticion-container">
+
+    <div class="contenedor-formulario">
+
+      <div *ngIf="infoIf">
+        <form class="formulario">
+          <div *ngIf="vehicleOrder" class="detalles">
+
+            <h2>Datos de la solicitud</h2>
+
+            <ol>
+              <li>{{ vehicleOrder.origin }} - Desde</li>
+              <li>{{ vehicleOrder.destination }} - Destino</li>
+              <li>{{ vehicleOrder.distance }} km - Distancia</li>
+              <li>{{ vehicleOrder.vehicleTypeName }} - Tipo vehículo</li>
+              <li *ngIf="peticionesFrom && peticionesFrom.get('fecha')?.value">{{ peticionesFrom.get('fecha')?.value }}
+                - Fecha </li>
+              <li *ngIf="peticionesFrom && peticionesFrom.get('descripcion')?.value">{{
+                peticionesFrom.get('descripcion')?.value }} - Descripción</li>
+              <li>{{ value | pipeCop }} <b>- Valor del servicio</b></li>
+            </ol>
+
+          </div>
+
+          <div class="input-with-icon">
+
+            <button class="btn-route btn-rojo" (click)="cancelarRuta()" *ngIf="botonCancelarRuta"
+              [routerLink]="['/layout']">Cancelar ruta</button>
+            <button class="btn-route btn-verde" (click)="confirmarVehiculo()" *ngIf="botonSolicitarViaje">Confirmar
+              auto</button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+      <form class="formulario" [formGroup]="peticionesFrom" (ngSubmit)="solicitarVehiculo()" *ngIf="formIf">
+
+        <div>
+          <label>Desde:</label>
+          <input #origenInput id="origenInput" formControlName="origen"
+            (input)="buscarAutocompletadoOrigen(autocompleteOrigen)" placeholder="Origen">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div>
+          <label>Hacia:</label>
+          <input #destinoInput id="destinoInput" formControlName="destino"
+            (input)="buscarAutocompletadoDestino(autocompleteDestino)" placeholder="Destino">
+          <i class="fa-solid fa-location-crosshairs"></i>
+        </div>
+
+        <div>
+          <label>Fecha:</label>
+          <input type="date" id="" name="" formControlName="fecha" required>
+          <i class="fa-regular fa-calendar-days"></i>
+        </div>
+
+        <div>
+          <label>Descripccion:</label>
+          <input type="" id="" name="" formControlName="descripcion" placeholder="Escriba la descripcion del acarreo"
+            required>
+          <i class="fa-solid fa-signs-post"></i>
+        </div>
+
+        <div class="input-with-icon">
+          <input type="submit" value="Calcular Ruta" class="button" (click)="calcularRuta()" *ngIf="botonCalcularRuta">
+          <button class="btn-route btn-rojo" (click)="cancelarRuta()" *ngIf="botonCancelarRuta"
+            [routerLink]="['/']">Cancelar pedido</button>
+          <button class="btn-route btn-verde" (click)="solicitarVehiculo()" *ngIf="botonSolicitarViaje">Solicitar un
+            auto</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,46 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Habilitar desplazamiento vertical */
+}
+div::-webkit-scrollbar {
+  width: 2px; /* Ancho de la barra de desplazamiento */
+}
+div::-webkit-scrollbar-thumb {
+  background-color: rgb(65, 65, 176); /* Color del pulgar de la barra de desplazamiento */
+}
+div::-webkit-scrollbar-track {
+  background-color: rgba(111, 31, 167, 1); /* Color de fondo de la barra de desplazamiento */
+}
+
+label {
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+input {
+  width: 80%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  background-color: rgb(212, 204, 204);
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 1%;
+}
+
+button {
+  font-size: 20px;
+  color: var(--color-text);
+  background-color: #6610f2;
+  margin-top: 4%;
+  padding: 10px;
+  border-radius: 11%;
+  border: none;
+  cursor: pointer;
+}

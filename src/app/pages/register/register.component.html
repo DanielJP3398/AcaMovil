@@ -1,0 +1,19 @@
+<div class="register">
+  <form>
+    <h2>Bienvenido! Registrate</h2>
+    <select (change)="onRoleChange($event)">
+      <option>Selecciona tu rol</option>
+      <option value="usuario">Usuario</option>
+      <option value="conductor">Conductor</option>
+    </select>
+    <br>
+    <div *ngIf="selectedRole === 'usuario'">
+      <app-registration-user></app-registration-user>
+    </div>
+    <div *ngIf="selectedRole === 'conductor'">
+      <app-registration-driver></app-registration-driver>
+    </div>
+    <br>
+    <a routerLink="/login"><b>Ya tengo cuenta</b></a>
+  </form>
+</div>

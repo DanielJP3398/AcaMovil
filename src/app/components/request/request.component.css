@@ -1,0 +1,192 @@
+.map {
+  width: 100%;
+  height: 45%;
+}
+
+.curucel {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+img:hover {
+  padding: 1%;
+}
+
+/*   estilos carucel    */
+.carrusel-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  height: 14%;
+  scroll-snap-type: x mandatory;
+  background: rgb(65, 65, 176);
+  background: linear-gradient(90deg, rgba(65, 65, 176, 1) 0%, rgba(111, 31, 167, 1) 51%, rgba(65, 65, 176, 1) 100%);
+}
+
+.carrusel-container img {
+  width: 41%;
+  display: flex;
+  margin-left: 10%;
+  margin-top: 1%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrusel-container::-webkit-scrollbar {
+  width: 100%;
+  height: 3.5px;
+}
+
+.carrusel-container::-webkit-scrollbar-thumb {
+  background-color: rgb(65, 65, 176);
+}
+
+.carrusel-container::-webkit-scrollbar-track {
+  background-color: rgba(111, 31, 167, 1);
+}
+
+/*  end  estilos carucel    */
+
+.peticion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 86%;
+  background: rgb(65, 65, 176);
+  background: linear-gradient(90deg, rgba(65, 65, 176, 1) 0%, rgba(111, 31, 167, 1) 51%, rgba(65, 65, 176, 1) 100%);
+}
+
+.contenedor-formulario {
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+.formulario {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto;
+  /* Habilitar desplazamiento vertical */
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 1);
+  background-color: whitesmoke;
+}
+
+.formulario::-webkit-scrollbar {
+  width: 9px;
+  /* Ancho de la barra de desplazamiento */
+}
+
+.formulario::-webkit-scrollbar-thumb {
+  background-color: rgb(65, 65, 176);
+  /* Color del pulgargb(53, 53, 202) desplazamiento */
+}
+
+.formulario::-webkit-scrollbar-track {
+  background-color: rgba(111, 31, 167, 1);
+  /* Color de fondo de la barra de desplazamiento */
+}
+
+.formulario label {
+  width: 80%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 17px;
+
+}
+
+.formulario input {
+  margin: 2%;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 1px 2px 1px rgba(0, 0, 1, 0.2);
+  background-color: rgb(212, 204, 204);
+}
+
+select {
+  margin: 2%;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 1px 2px 1px rgba(0, 0, 1, 0.2);
+  background-color: rgb(212, 204, 204);
+}
+
+i {
+  color: #6610f2;
+  font-size: large;
+}
+
+form div {
+  margin-top: 4%;
+  width: 90%;
+}
+
+.detalles ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detalles li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 17px;
+
+}
+
+.detalles li:last-child {
+  border-bottom: none;
+}
+
+.detalles li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #6610f2;
+  margin-right: 10px;
+}
+
+.input-with-icon input {
+  font-size: 22px;
+  color: var(--color-text);
+  background-color: #6610f2;
+  padding: 15px;
+  border-radius: 11%;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-route {
+  width: 94%;
+  height: 60%;
+  color: aliceblue;
+  font-size: 21px;
+  margin-top: 1%;
+  margin-left: 3%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #312e2e96;
+  background-color: blueviolet;
+}
+
+.btn-rojo {
+  width: 45%;
+  background-color: rgb(190, 34, 34);
+}
+
+.btn-verde {
+  width: 45%;
+  background-color: rgb(114, 173, 25);
+}

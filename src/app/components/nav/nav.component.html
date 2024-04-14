@@ -1,0 +1,47 @@
+<nav>
+
+  <input type="checkbox" id="menu">
+
+  <label class="menu" for="menu">
+    <img src="assets/menu.png" class="btnMenu">
+  </label>
+
+  <ul>
+
+    <header>
+      <p class="nombre"><b>Jose Daniel</b></p>
+      <img src="assets/perfil.jpg" class="btnPerfil">
+    </header>
+    <br>
+    <li [routerLink]="['/layout']" routerLinkActive="active">
+      <img class="icon" src="assets/peticiones.png">
+      <b>Solicitar Acarreo</b>
+    </li>
+    <li routerLink="/info" routerLinkActive="active">
+      <img class="icon" src="assets/historial.png">
+      <b>Historial</b>
+    </li>
+    <li [routerLink]="['/chat']" routerLinkActive="active">
+      <img class="icon" src="assets/chat.png">
+      <b>Chat</b>
+    </li>
+    <li [routerLink]="['/ratings']" routerLinkActive="active">
+      <img class="icon" src="assets/calificacion.png">
+      <b>Calificaciones</b>
+    </li>
+    <li [routerLink]="['/support']" routerLinkActive="active">
+      <img class="icon" src="assets/mi-vehiculo.png">
+      <b>Soporte</b>
+    </li>
+    <li [routerLink]="['/config']" routerLinkActive="active">
+      <img class="icon" src="assets/soporte.png">
+      <b>Configuracion</b>
+    </li>
+    <li (click)="cerrarSesion()" class="cerrar-seccion" style="background-color: rgb(237, 242, 246);">
+      <img class="icon" src="assets/cerrar.png">
+      <b>Cerrar sesión</b>
+    </li>
+
+  </ul>
+
+</nav>

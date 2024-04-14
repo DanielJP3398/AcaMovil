@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+<div class="pendientes">
+  <div class="information-container" *ngIf="travelInfo">
+    <h2>Solicitudes Pendiente</h2>
+    <ol>
+      <li><b>Origen:</b> {{ travelInfo.origin }}</li>
+      <li><b>Destino:</b> {{ travelInfo.destination }}</li>
+      <li><b>Distancia:</b> {{ travelInfo.distance }} km</li>
+      <li><b>Tipo vehículo:</b> {{ travelInfo.vehicleTypeName }}</li>
+      <li *ngIf="travelInfo.fecha"><b>Fecha:</b> {{ travelInfo.fecha }}</li>
+      <li *ngIf="peticionesFrom && peticionesFrom.get('descripcion')?.value"><b>Descripción:</b> {{ peticionesFrom.get('descripcion')?.value }}</li>
+      <li><b>Valor del servicio:</b> {{ travelInfo.value | pipeCop }}</li>
+      <!-- <li *ngIf="fechaSolicitud"><b>Fecha de Solicitud:</b> {{ fechaSolicitud }}</li> -->
+      <li><b>Estado:</b> <span>Pendiente por aceptar</span></li>
+    </ol>
+  </div>
+</div>
+
